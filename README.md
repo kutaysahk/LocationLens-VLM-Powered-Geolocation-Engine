@@ -1,4 +1,4 @@
-◈ LocationLens
+# ◈ LocationLens
 VLM-Powered Geolocation Engine
 
 LocationLens is an intelligent scene-recognition and geolocation tool that identifies physical locations from images using a multi-model approach. It combines the visual reasoning of Qwen2.5-VL with a custom Spatial Intersection Engine to cross-reference identified signage against OpenStreetMap (OSM) data.
