@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+httpx
+torch
+transformers
+accelerate
+bitsandbytes
+qwen-vl-utils
+pillow
+python-multipart
