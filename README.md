@@ -1,18 +1,14 @@
-# React + Vite
+LocationLens ◈ VLM-Powered Geolocation Engine
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+LocationLens is an intelligent scene-recognition and geolocation tool that identifies physical locations from images using a Multi-Model approach. It combines the visual reasoning of Qwen2.5-VL with a custom Spatial Intersection Engine to cross-reference identified signage against OpenStreetMap (OSM) data.
 
-Currently, two official plugins are available:
+Key Features
+VLM Sign Extraction: Uses 4-bit quantized Qwen2.5-VL-3B to read business names, shop signs, and landmarks with per-sign confidence weighting.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Intersection Engine: A robust algorithm that tries every detected sign as a spatial anchor, looking for clusters of businesses within a 200m radius to verify location accuracy.
 
-## React Compiler
+EXIF Intelligence: Automatically prioritizes embedded GPS data for ground-truth accuracy while using the VLM for semantic scene categorization.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Hybrid Search: Implements a multi-strategy parser to rescue text from truncated or malformed JSON outputs.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-
-ngrok is used for phone connection
+Cyberpunk UI: A responsive React frontend featuring a "scanline" animation, real-time status updates, and a comprehensive scan history.
